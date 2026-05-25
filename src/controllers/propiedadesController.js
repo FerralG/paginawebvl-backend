@@ -1,25 +1,25 @@
-const propiedadesModel = require('../models/propiedades.model');
+const propiedadesModel = require('../models/propiedadesModel');
 
 const getPropiedades = async (req, res) => {
 
-  try {
+    try {
 
-    const propiedades = await propiedadesModel.obtenerPropiedades();
+        const propiedades = await propiedadesModel.obtenerPropiedades();
 
-    res.json(propiedades);
+        res.json(propiedades);
 
-  } catch (error) {
+    } catch (error) {
 
-    console.error(error);
+        console.error(error);
 
-    res.status(500).json({
-      error: 'Error obteniendo propiedades'
-    });
+        res.status(500).json({
+            error: 'Error obteniendo propiedades'
+        });
 
-  }
+    }
 
 };
 
 module.exports = {
-  getPropiedades
+    getPropiedades
 };

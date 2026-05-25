@@ -2,16 +2,16 @@ const pool = require('../db');
 
 const obtenerPropiedades = async () => {
 
-  const result = await pool.query(`
-    SELECT *
-    FROM propiedades
-    ORDER BY id DESC
-  `);
+    const result = await pool.query(`
+        SELECT *
+        FROM propiedades
+        ORDER BY id DESC
+    `);
 
-  return result.rows;
+    return result.rows;
 
 };
 
 module.exports = {
-  obtenerPropiedades
+    obtenerPropiedades
 };
