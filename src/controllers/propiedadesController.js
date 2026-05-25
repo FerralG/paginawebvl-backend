@@ -10,13 +10,13 @@ const getPropiedades = async (req, res) => {
 
     } catch (error) {
 
-        console.error(error);
+    console.error(error);
 
-        res.status(500).json({
-            error: 'Error obteniendo propiedades'
-        });
+    res.status(500).json({
+        error: error.message
+    });
 
-    }
+}
 
 };
 
