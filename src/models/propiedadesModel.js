@@ -5,19 +5,13 @@ const obtenerPropiedades = async () => {
     const result = await pool.query(`
         SELECT
             id,
-            title,
-            type,
-            bedrooms,
-            bathrooms,
-            parking,
-            imageurl AS "imageUrl",
-            locationname AS "locationName",
-            operation,
-
-            CASE
-                WHEN operation = 'renta' THEN renta_precio
-                ELSE venta_precio
-            END AS price
+            propiedad AS title,
+            tipo AS type,
+            recamaras AS bedrooms,
+            banos AS bathrooms,
+            estacionamiento AS parking,
+            direccion AS locationName,
+            renta_precio AS price
 
         FROM propiedades
 
