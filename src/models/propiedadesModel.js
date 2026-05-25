@@ -12,7 +12,9 @@ const obtenerPropiedades = async () => {
             estacionamiento AS parking,
             direccion AS "locationName",
             renta_precio AS price,
-            galleryimages AS "galleryImages"
+            galleryimages AS "galleryImages",
+            coordenada_x AS "lat",
+            coordenada_y AS "lng"
 
         FROM propiedades
 
@@ -37,7 +39,9 @@ const obtenerPropiedadById = async (id) => {
             renta_precio AS price,
             descripcion,
             superficie_construccion_m2 AS area,
-            galleryimages AS "galleryImages"
+            galleryimages AS "galleryImages",
+            coordenada_x AS "lat",
+            coordenada_y AS "lng"
 
         FROM propiedades
 
