@@ -5,4 +5,6 @@ const propiedadesController = require('../controllers/propiedadesController');
 
 router.get('/', propiedadesController.getPropiedades);
 
+router.get('/:id', propiedadesController.getPropiedadById);
+
 module.exports = router;
