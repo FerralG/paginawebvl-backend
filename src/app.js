@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 
-const propiedadesRoutes = require('./routes/propiedades.routes');
+const propiedadesRoutes = require('./routes/propiedadesRoutes');
 
 const app = express();
 
