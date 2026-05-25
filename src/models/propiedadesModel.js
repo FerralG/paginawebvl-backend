@@ -10,9 +10,9 @@ const obtenerPropiedades = async () => {
             recamaras AS bedrooms,
             banos AS bathrooms,
             estacionamiento AS parking,
-            direccion AS locationName,
-            renta_precio AS price
-            galleryimages AS "galleryImages",
+            direccion AS "locationName",
+            renta_precio AS price,
+            galleryimages AS "galleryImages"
 
         FROM propiedades
 
@@ -22,7 +22,6 @@ const obtenerPropiedades = async () => {
     return result.rows;
 
 };
-
 
 const obtenerPropiedadById = async (id) => {
 
@@ -34,11 +33,11 @@ const obtenerPropiedadById = async (id) => {
             recamaras AS bedrooms,
             banos AS bathrooms,
             estacionamiento AS parking,
-            direccion AS locationName,
+            direccion AS "locationName",
             renta_precio AS price,
             descripcion,
-            superficie_construccion_m2 AS area
-            galleryimages AS "galleryImages",
+            superficie_construccion_m2 AS area,
+            galleryimages AS "galleryImages"
 
         FROM propiedades
 
@@ -52,5 +51,4 @@ const obtenerPropiedadById = async (id) => {
 module.exports = {
     obtenerPropiedades,
     obtenerPropiedadById
-
 };
